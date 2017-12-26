@@ -40,7 +40,7 @@ __interrupt void EXTI_PORTB_IRQHandler(void)
 __interrupt void EXTI_PORTC_IRQHandler(void)
 {
   
-}*/
+}
 #pragma vector=8
 __interrupt void EXTI_PORTD_IRQHandler(void)
 {
@@ -50,7 +50,7 @@ __interrupt void EXTI_PORTD_IRQHandler(void)
 __interrupt void EXTI_PORTE_IRQHandler(void)
 {
    
-}
+}*/
 #ifdef STM8S903
 #pragma vector=0xA
 __interrupt void EXTI_PORTF_IRQHandler(void)
@@ -129,13 +129,13 @@ __interrupt void UART1_TX_IRQHandler(void)
 {
   
 }
-//#pragma vector=0x14
-//__interrupt void UART1_RX_IRQHandler(void)
-//{ 
+#pragma vector=0x14
+__interrupt void UART1_RX_IRQHandler(void)
+{ 
 
   
   
-//}
+}
 #endif
 #pragma vector=0x15
 __interrupt void I2C_IRQHandler(void)
