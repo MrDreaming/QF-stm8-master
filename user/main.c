@@ -24,7 +24,7 @@ void testKeyInterrupt(){
 }
 
 #pragma vector = 7
-__interrupt void EXIT_PORTC_IRQHanderBBBB(void){
+__interrupt void EXIT_PORTC_IRQHander(void){
   if(GPIO_ReadInputPin(GPIOC,GPIO_PIN_1) == Key_Down){
       while(GPIO_ReadInputPin(GPIOC,GPIO_PIN_1) == Key_Down);
       Gpio_Led_Open();
