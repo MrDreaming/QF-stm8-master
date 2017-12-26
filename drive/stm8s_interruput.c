@@ -129,13 +129,13 @@ __interrupt void UART1_TX_IRQHandler(void)
 {
   
 }
-#pragma vector=0x14
-__interrupt void UART1_RX_IRQHandler(void)
-{ 
+//#pragma vector=0x14
+//__interrupt void UART1_RX_IRQHandler(void)
+//{ 
 
   
   
-}
+//}
 #endif
 #pragma vector=0x15
 __interrupt void I2C_IRQHandler(void)
