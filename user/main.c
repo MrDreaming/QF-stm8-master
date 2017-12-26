@@ -4,24 +4,36 @@
 #include "led.h"
 #include "tim1.h"
 #include "server.h"
+ 
 
-void testDelay();
+//static uint8_t Tx_Buffer[] = "good qfv5";
 
-int main(void){
-  testDelay();
+void testKeyInterrupt();
+
+int main(void)
+{
+  testKeyInterrupt();
 }
 
-void testDelay(){
-   CLK_HSIPrescalerConfig(CLK_PRESCALER_HSIDIV1);
-  /*!<Set High speed internal clock */
-   LED_Init();
-   Tim1_Init();
-   LED1_Open(); 
-   
-   Gpio_Led_Init();
-   __enable_interrupt(); 
-  while (1){
-    Gpio_Led_Reverse();
-    delay_ms(500);
+void testKeyInterrupt(){
+  Clk_Init();
+  Gpio_Led_Init();
+  __enable_interrupt(); 
+  Gpio_Key_Init(true);
+  while(1);
+}
+
+#pragma vector = 7
+__interrupt void EXIT_PORTC_IRQHanderBBBB(void){
+  if(GPIO_ReadInputPin(GPIOC,GPIO_PIN_1) == Key_Down){
+      while(GPIO_ReadInputPin(GPIOC,GPIO_PIN_1) == Key_Down);
+      Gpio_Led_Open();
+      __enable_interrupt(); 
+      delay_ms(1000);
+  }else if(GPIO_ReadInputPin(GPIOC,GPIO_PIN_2) == Key_Down) {
+      while(GPIO_ReadInputPin(GPIOC,GPIO_PIN_2) == Key_Down);
+      Gpio_Led_Close();
+      __enable_interrupt(); 
+      delay_ms(1000);
   }
 }

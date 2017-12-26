@@ -1984,12 +1984,6 @@
     <file>
       <name>$PROJ_DIR$\server.c</name>
     </file>
-    <file>
-      <name>$PROJ_DIR$\userinputer.c</name>
-    </file>
-    <file>
-      <name>$PROJ_DIR$\useruart.c</name>
-    </file>
   </group>
 </project>
 
