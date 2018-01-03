@@ -9,13 +9,13 @@ TriggerName=main
 LimitSize=0
 ByteLimit=50
 [DebugChecksum]
-Checksum=1996465858
+Checksum=-2000503478
 [CodeCoverage]
 Enabled=_ 0
 [CallStack]
 ShowArgs=0
 [Disassembly]
-MixedMode=1
+MixedMode=0
 [DriverProfiling]
 Enabled=0
 Mode=1
@@ -63,7 +63,15 @@ LogEnabled=0
 GraphEnabled=0
 ShowTimeLog=1
 [Breakpoints]
-Count=0
+Bp0=_ "STD_CODE" "{$PROJ_DIR$\..\drive\stm8s_interruput.c}.111.1" 1 0 0 0 "" 0 ""
+Bp1=_ "STD_CODE" "{$PROJ_DIR$\..\drive\stm8s_interruput.c}.123.1" 1 0 0 0 "" 0 ""
+Bp2=_ "STD_CODE" "{$PROJ_DIR$\..\drive\stm8s_interruput.c}.131.1" 1 0 0 0 "" 0 ""
+Bp3=_ "STD_CODE" "{$PROJ_DIR$\..\drive\stm8s_interruput.c}.162.1" 1 0 0 0 "" 0 ""
+Bp4=_ "STD_CODE" "{$PROJ_DIR$\..\drive\stm8s_interruput.c}.118.1" 1 0 0 0 "" 0 ""
+Bp5=_ "STD_CODE" "{$PROJ_DIR$\..\drive\stm8s_interruput.c}.106.1" 1 0 0 0 "" 0 ""
+Bp6=_ "STD_CODE" "{$PROJ_DIR$\..\drive\stm8s_interruput.c}.106.1" 1 0 0 0 "" 0 ""
+Bp7=_ "STD_CODE" "{$PROJ_DIR$\..\drive\stm8s_interruput.c}.162.1" 1 0 0 0 "" 0 ""
+Count=8
 [Log file]
 LoggingEnabled=_ 0
 LogFile=_ ""
